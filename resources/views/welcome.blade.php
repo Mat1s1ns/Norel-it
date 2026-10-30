@@ -14,6 +14,7 @@
 
             <div class="hero-center">
                 <h1 class="hero-title">Sākums</h1>
+                <h2 class="hero-subtitle">Kases aparāti un datortehnikas serviss</h2>
                 <div class="title-bar"></div>
             </div>
         </section>
