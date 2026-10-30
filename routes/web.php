@@ -17,3 +17,11 @@ Route::get('/datortehnikas-tirdznieciba', function () {
 Route::get('/it-audits', function () {
     return view('it-audits');
 });
+
+Route::get('/it-risinājumi', function () {
+    return view('it-risinajumi');
+});
+
+Route::get('/it-risinajumi', function () {
+    return view('it-risinajumi');
+});

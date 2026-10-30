@@ -336,6 +336,43 @@ body {
     margin-bottom: 14px;
 }
 
+/* Page Banner (IT risinājumi) */
+.page-banner {
+    display: block;
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    margin: 36px auto 44px auto;
+}
+
+/* Service Columns (3 cols with dark headings and bullet lists) */
+.service-heading {
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 16px;
+    line-height: 1.35;
+}
+
+.service-list {
+    list-style-type: square;
+    padding-left: 20px;
+    margin: 12px 0 16px 0;
+}
+
+.service-list li {
+    font-size: 13px;
+    line-height: 1.62;
+    color: #212121;
+    margin-bottom: 4px;
+}
+
+.bottom-callout {
+    margin-top: 48px;
+    padding-top: 10px;
+}
+
 /* ==========================================================================
    5. Responsive Breakpoints
    ========================================================================== */
