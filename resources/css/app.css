@@ -14,7 +14,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow-x: clip;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -29,8 +29,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
-    z-index: 50;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s ease;
 }
 
 .header-brand {
@@ -48,17 +51,6 @@ body {
     width: auto;
     object-fit: contain;
     display: block;
-}
-
-.site-title {
-    font-family: 'Open Sans', 'Google Sans', 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: #202124;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    letter-spacing: -0.2px;
 }
 
 .header-nav {
@@ -493,6 +485,79 @@ body {
     font-weight: 400;
     color: #212121;
     line-height: 1.55;
+}
+
+/* Par mums Page */
+.about-container {
+    max-width: 900px;
+    margin: 36px auto 60px auto;
+}
+
+.about-intro {
+    font-size: 13px;
+    line-height: 1.62;
+    color: #212121;
+    margin-bottom: 24px;
+}
+
+.about-subtitle {
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 12px;
+}
+
+.about-list {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 36px;
+}
+
+.about-list li {
+    font-size: 13px;
+    line-height: 1.65;
+    color: #212121;
+    margin-bottom: 4px;
+}
+
+.partners-title {
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #212121;
+    margin-top: 36px;
+    margin-bottom: 20px;
+}
+
+.partners-logos-wrap {
+    margin-bottom: 36px;
+}
+
+.partners-logos-img {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.esf-intro {
+    font-size: 13px;
+    line-height: 1.62;
+    color: #212121;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+.esf-banners-wrap {
+    margin-bottom: 40px;
+}
+
+.esf-banners-img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* ==========================================================================

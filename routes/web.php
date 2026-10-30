@@ -42,3 +42,7 @@ Route::get('/veikalu-aprikojums', function () {
     return view('veikalu-aprikojums');
 });
 
+Route::get('/par-mums', function () {
+    return view('par-mums');
+});
+
