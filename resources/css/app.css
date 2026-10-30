@@ -373,6 +373,84 @@ body {
     padding-top: 10px;
 }
 
+/* Contacts Page (Kontakti) */
+.contacts-container {
+    max-width: 950px;
+    margin: 36px auto 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.contacts-info {
+    flex: 1;
+    max-width: 450px;
+}
+
+.contact-block {
+    margin-bottom: 22px;
+}
+
+.contact-heading {
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.contact-inline-heading {
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #212121;
+}
+
+.contact-text {
+    font-size: 13px;
+    color: #212121;
+    line-height: 1.55;
+    margin-bottom: 3px;
+}
+
+.contact-link {
+    color: #212121;
+    text-decoration: underline;
+    font-weight: 700;
+    transition: color 0.15s ease;
+}
+
+.contact-link:hover {
+    color: #a90707;
+}
+
+.work-hours {
+    margin-top: 6px;
+    padding-left: 28px;
+}
+
+.work-hours .contact-text {
+    font-weight: 700;
+}
+
+.contacts-map {
+    width: 440px;
+    flex-shrink: 0;
+}
+
+.contacts-map .map-link {
+    display: block;
+}
+
+.contacts-map-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
 /* ==========================================================================
    5. Responsive Breakpoints
    ========================================================================== */
@@ -412,5 +490,12 @@ body {
     .columns-grid {
         grid-template-columns: 1fr;
         row-gap: 36px;
+    }
+    .contacts-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .contacts-map {
+        width: 100%;
     }
 }

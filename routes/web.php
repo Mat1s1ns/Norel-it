@@ -30,3 +30,7 @@ Route::get('/jaunumi', function () {
     return view('jaunumi');
 });
 
+Route::get('/kontakti', function () {
+    return view('kontakti');
+});
+
