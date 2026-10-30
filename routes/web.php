@@ -13,3 +13,7 @@ Route::get('/datortehnikas-tirdzniecība', function () {
 Route::get('/datortehnikas-tirdznieciba', function () {
     return view('datortehnika');
 });
+
+Route::get('/it-audits', function () {
+    return view('it-audits');
+});
