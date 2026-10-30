@@ -34,3 +34,11 @@ Route::get('/kontakti', function () {
     return view('kontakti');
 });
 
+Route::get('/musu-klienti', function () {
+    return view('musu-klienti');
+});
+
+Route::get('/veikalu-aprikojums', function () {
+    return view('veikalu-aprikojums');
+});
+

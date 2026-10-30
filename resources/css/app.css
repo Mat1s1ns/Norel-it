@@ -451,6 +451,50 @@ body {
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
+/* Mūsu klienti Page */
+.clients-container {
+    max-width: 950px;
+    margin: 36px auto 60px auto;
+}
+
+.clients-intro {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.55;
+    color: #212121;
+    margin-bottom: 36px;
+}
+
+.clients-list {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.client-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.client-name {
+    width: 210px;
+    flex-shrink: 0;
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #212121;
+    line-height: 1.45;
+}
+
+.client-desc {
+    flex: 1;
+    font-size: 13px;
+    font-weight: 400;
+    color: #212121;
+    line-height: 1.55;
+}
+
 /* ==========================================================================
    5. Responsive Breakpoints
    ========================================================================== */
@@ -496,6 +540,13 @@ body {
         align-items: stretch;
     }
     .contacts-map {
+        width: 100%;
+    }
+    .client-row {
+        flex-direction: column;
+        gap: 6px;
+    }
+    .client-name {
         width: 100%;
     }
 }

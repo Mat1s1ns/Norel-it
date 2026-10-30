@@ -52,7 +52,7 @@
             <a href="/kontakti" class="nav-item active">Kontakti</a>
             <span class="nav-separator">·</span>
 
-            <a href="/mūsu-klienti" class="nav-item">Mūsu klienti</a>
+            <a href="/musu-klienti" class="nav-item">Mūsu klienti</a>
             <span class="nav-separator">·</span>
 
             <div class="nav-dropdown">
@@ -61,8 +61,10 @@
                     <svg class="dropdown-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
                 </span>
                 <ul class="dropdown-menu">
-                    <li><a href="/pakalpojumi" class="dropdown-item">Visi pakalpojumi</a></li>
                     <li><a href="/par-mums" class="dropdown-item">Par mums</a></li>
+                    <li><a href="/serveri" class="dropdown-item">Serveri</a></li>
+                    <li><a href="/veikalu-aprikojums" class="dropdown-item">Veikalu aprīkojums</a></li>
+                    <li><a href="/vidzemes-datu-centrs" class="dropdown-item">Vidzemes datu centrs</a></li>
                 </ul>
             </div>
 
