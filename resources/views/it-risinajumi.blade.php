@@ -44,8 +44,7 @@
                     <svg class="dropdown-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="/jaunumi" class="dropdown-item">Visi jaunumi</a></li>
-                    <li><a href="/jaunumi/vakances" class="dropdown-item">Aktuālās vakances</a></li>
+                    <li><a href="/" class="dropdown-item">Tests</a></li>
                 </ul>
             </div>
             <span class="nav-separator">·</span>

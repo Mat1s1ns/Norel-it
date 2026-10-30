@@ -25,3 +25,8 @@ Route::get('/it-risinājumi', function () {
 Route::get('/it-risinajumi', function () {
     return view('it-risinajumi');
 });
+
+Route::get('/jaunumi', function () {
+    return view('jaunumi');
+});
+

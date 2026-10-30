@@ -112,8 +112,10 @@ body {
     transition: color 0.15s ease;
 }
 
-.dropdown-trigger:hover {
+.dropdown-trigger:hover,
+.dropdown-trigger.active {
     color: #202124;
+    font-weight: 700;
 }
 
 .dropdown-arrow {
