@@ -6,22 +6,22 @@
     <title>Kases aparāti un datortehnikas serviss Vidzemē - Norel IT</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
+    <link rel="icon" type="image/png" href="/images/logo.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Roboto:wght@400;500;700&family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Styles & Scripts via Vite -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
 
     <!-- Top Navigation Header -->
     <header class="site-header">
         <a href="/" class="header-brand">
-            <img src="{{ asset('images/logo.png') }}" alt="Norel IT Logo" class="brand-logo">
+            <img src="/images/logo.png" alt="Norel IT Logo" class="brand-logo">
             <span class="site-title">Kases aparāti un datortehnikas s...</span>
         </a>
 
@@ -82,7 +82,7 @@
         <!-- Hero Section: TeamViewer icon on left + Sākums in center -->
         <section class="hero-row">
             <a href="https://get.teamviewer.com/by5pesv" target="_blank" rel="noopener noreferrer" class="teamviewer-support" title="Attālinātā palīdzība (TeamViewer)">
-                <img src="{{ asset('images/teamviewer.png') }}" alt="TeamViewer QuickSupport" class="teamviewer-img">
+                <img src="/images/teamviewer.png" alt="TeamViewer QuickSupport" class="teamviewer-img">
             </a>
 
             <div class="hero-center">

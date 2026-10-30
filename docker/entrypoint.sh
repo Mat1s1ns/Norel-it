@@ -16,6 +16,10 @@ mkdir -p /var/www/html/storage/framework/sessions \
 
 # Fix permissions
 chmod -R 777 /var/www/html/storage /var/www/html/bootstrap/cache 2>/dev/null || true
+chmod -R 755 /var/www/html/public 2>/dev/null || true
+
+# Remove stale Vite dev server hot file if present
+rm -f /var/www/html/public/hot
 
 # Install Composer dependencies if vendor directory is missing
 if [ ! -d /var/www/html/vendor ]; then
