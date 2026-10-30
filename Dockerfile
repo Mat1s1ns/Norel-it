@@ -1,6 +1,6 @@
 FROM php:8.3-fpm
 
-ARG NODE_VERSION=20
+ARG NODE_VERSION=22
 
 # Set working directory
 WORKDIR /var/www/html
@@ -45,7 +45,6 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # Install Node.js & npm for frontend builds and Vite HMR
 RUN curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - \
     && apt-get install -y --no-install-recommends nodejs \
-    && npm install -g npm@latest \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy custom PHP configuration
@@ -61,4 +60,3 @@ EXPOSE 9000 5173
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 CMD ["php-fpm"]
-
