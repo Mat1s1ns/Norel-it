@@ -9,6 +9,7 @@
 
 body {
     font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+    background-color: #ffffff;
     color: #202124;
     min-height: 100vh;
     display: flex;
@@ -16,7 +17,10 @@ body {
     overflow-x: clip;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
 
+/* Home Page specific animated gradient background */
+body.page-home {
     background: linear-gradient(
         -45deg,
         #650b13,
@@ -171,12 +175,148 @@ body {
     display: block;
     color: #3c4043;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 13.5px;
     line-height: 1.4;
-    transition: background 0.15s;
+    transition: background 0.15s, color 0.15s;
 }
 
 .dropdown-item:hover {
+    background-color: #f1f3f4;
+    color: #202124;
+}
+
+/* More Dropdown Menu */
+.more-dropdown .dropdown-menu {
+    left: auto;
+    right: 0;
+    min-width: 270px;
+    width: 270px;
+    padding: 8px 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    background: #ffffff;
+}
+
+.drilldown-panel,
+.drilldown-panel li {
+    list-style: none !important;
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Breadcrumbs at the top of Level 2 and Level 3 */
+.breadcrumb-item .dropdown-item.breadcrumb-link {
+    padding: 10px 20px 10px 44px !important;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #9aa0a6 !important;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    transition: color 0.15s, background-color 0.15s;
+}
+
+.breadcrumb-item .dropdown-item.breadcrumb-link:hover {
+    color: #5f6368 !important;
+    background-color: #f8f9fa;
+}
+
+/* Level 1 items */
+.drilldown-panel[data-level="1"] .dropdown-item {
+    padding: 11px 20px 11px 44px;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #555555;
+    display: block;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+}
+
+.drilldown-panel[data-level="1"] .dropdown-item:hover {
+    background-color: #f1f3f4;
+    color: #202124;
+}
+
+/* Drilldown row with toggle button (flex layout) */
+.drilldown-item-wrap {
+    position: relative;
+}
+
+.drilldown-row {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 14px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.drilldown-row-lvl2 {
+    padding-left: 28px;
+}
+
+.drilldown-row:hover {
+    background-color: #f1f3f4;
+}
+
+.drilldown-btn {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    border: 1px solid #70757a;
+    border-radius: 2px;
+    background: #ffffff;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 10px 0 0;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.drilldown-btn svg {
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    min-height: 14px;
+    fill: #555555;
+    display: block;
+    pointer-events: none;
+}
+
+.drilldown-row:hover .drilldown-btn,
+.drilldown-btn:hover {
+    border-color: #202124;
+}
+
+.drilldown-row .dropdown-item.drilldown-text {
+    flex: 1;
+    padding: 11px 0 !important;
+    background: transparent !important;
+    color: #555555;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* Level 2 & 3 child items */
+.drilldown-panel[data-level="2"] .dropdown-item.child-item,
+.drilldown-panel[data-level="3"] .dropdown-item.child-item {
+    padding: 11px 20px 11px 58px;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #555555;
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+}
+
+.drilldown-panel .dropdown-item.child-item:hover {
     background-color: #f1f3f4;
     color: #202124;
 }
@@ -218,13 +358,13 @@ body {
     position: relative;
 }
 
-/* Hero / Sākums section */
+/* Hero / Title section */
 .hero-row {
     display: flex;
     align-items: flex-start;
     position: relative;
     margin-top: 14px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .teamviewer-support {
@@ -256,7 +396,7 @@ body {
     font-family: 'Open Sans', 'Google Sans', 'Roboto', sans-serif;
     font-size: 46px;
     font-weight: 700;
-    color: #ffffff;
+    color: #a90707;
     letter-spacing: -0.5px;
     line-height: 1.15;
     margin: 0;
@@ -265,25 +405,37 @@ body {
 .title-bar {
     width: 66px;
     height: 4px;
-    background-color: #ffffff;
+    background-color: #a90707;
     margin: 14px auto 0 auto;
     border-radius: 1px;
 }
 
+body.page-home .hero-title {
+    color: #ffffff;
+}
+
+body.page-home .title-bar {
+    background-color: #ffffff;
+}
+
 /* ==========================================================================
-   3. Three Audience Columns / Cards
+   3. Three Columns (Audience on Home / Equipment on subpages)
    ========================================================================== */
 .columns-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 48px;
+    row-gap: 28px;
+}
+
+/* Home Page card styling */
+body.page-home .columns-grid {
     column-gap: 35px;
     row-gap: 35px;
-    align-items: stretch;
     padding: 15px;
 }
 
-/* Logu izskats (Card boxes) */
-.columns-grid .column-box {
+body.page-home .columns-grid .column-box {
     position: relative;
     padding: 30px;
     background: #ffffff;
@@ -300,16 +452,15 @@ body {
     z-index: 1;
 }
 
-/* PALIELINĀŠANĀS, UZBRAUCOT AR KURSORU */
-.columns-grid .column-box:hover {
+body.page-home .columns-grid .column-box:hover {
     transform: scale(1.08);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.20);
     border-color: #a90707;
     z-index: 10;
 }
 
-.col-heading,
-.column-title {
+body.page-home .columns-grid .column-box .column-title,
+body.page-home .columns-grid .column-box .col-heading {
     font-family: 'Open Sans', 'Google Sans', 'Roboto', sans-serif;
     font-size: 28px;
     font-weight: 700;
@@ -320,22 +471,27 @@ body {
     text-align: center;
 }
 
-.columns-grid .column-box .col-heading,
-.columns-grid .column-box .column-title,
-.columns-grid .column-box .service-heading {
+.column-title,
+.col-heading {
+    font-family: 'Open Sans', 'Google Sans', 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
     color: #a90707;
+    margin-bottom: 14px;
+    line-height: 1.25;
+    letter-spacing: -0.2px;
 }
 
-.col-text,
-.column-desc {
-    font-size: 15px;
+.column-desc,
+.col-text {
+    font-size: 13px;
     line-height: 1.62;
     color: #212121;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
-.col-text:last-of-type,
-.column-desc:last-of-type {
+.column-desc:last-of-type,
+.col-text:last-of-type {
     margin-bottom: 0;
 }
 
@@ -354,26 +510,16 @@ body {
 }
 
 /* ==========================================================================
-   4. Article & Content Typography & Cards
+   4. Article & Content Typography
    ========================================================================== */
-.content-text,
-.contacts-container,
-.clients-container,
-.about-container {
-    background: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 12px;
-    padding: 36px 44px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
 .content-text {
-    max-width: 950px;
+    width: 100%;
+    max-width: 900px;
     margin: 20px auto 40px auto;
 }
 
 .content-intro {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.62;
     color: #212121;
     margin-bottom: 24px;
@@ -381,7 +527,7 @@ body {
 
 .section-subtitle {
     font-family: 'Open Sans', 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 14.5px;
     font-weight: 700;
     color: #212121;
     margin-top: 24px;
@@ -390,14 +536,14 @@ body {
 }
 
 .text-line {
-    font-size: 13.5px;
+    font-size: 13px;
     line-height: 1.62;
     color: #212121;
     margin-bottom: 8px;
 }
 
 .closing-text {
-    font-size: 13.5px;
+    font-size: 13px;
     line-height: 1.62;
     color: #212121;
     margin-top: 22px;
@@ -408,19 +554,18 @@ body {
 .page-banner {
     display: block;
     width: 100%;
-    max-width: 1100px;
+    max-width: 680px;
     height: auto;
-    margin: 20px auto 40px auto;
-    border-radius: 8px;
+    margin: 36px auto 44px auto;
 }
 
 /* Service Columns (3 cols with dark headings and bullet lists) */
 .service-heading {
     font-family: 'Open Sans', 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 14.5px;
     font-weight: 700;
     color: #212121;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     line-height: 1.35;
 }
 
@@ -431,24 +576,20 @@ body {
 }
 
 .service-list li {
-    font-size: 13.5px;
+    font-size: 13px;
     line-height: 1.62;
     color: #212121;
     margin-bottom: 4px;
 }
 
 .bottom-callout {
-    margin-top: 36px;
-    padding: 24px 30px;
-    background: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 48px;
+    padding-top: 10px;
 }
 
 /* Contacts Page (Kontakti) */
 .contacts-container {
-    max-width: 980px;
+    max-width: 950px;
     margin: 30px auto 50px auto;
     display: flex;
     justify-content: space-between;
@@ -526,12 +667,12 @@ body {
 
 /* Mūsu klienti Page */
 .clients-container {
-    max-width: 980px;
+    max-width: 950px;
     margin: 30px auto 60px auto;
 }
 
 .clients-intro {
-    font-size: 13.5px;
+    font-size: 13px;
     font-weight: 700;
     line-height: 1.55;
     color: #212121;
@@ -554,7 +695,7 @@ body {
     width: 210px;
     flex-shrink: 0;
     font-family: 'Open Sans', 'Roboto', sans-serif;
-    font-size: 13.5px;
+    font-size: 13px;
     font-weight: 700;
     color: #212121;
     line-height: 1.45;
@@ -562,7 +703,7 @@ body {
 
 .client-desc {
     flex: 1;
-    font-size: 13.5px;
+    font-size: 13px;
     font-weight: 400;
     color: #212121;
     line-height: 1.55;
@@ -570,12 +711,12 @@ body {
 
 /* Par mums Page */
 .about-container {
-    max-width: 980px;
+    max-width: 900px;
     margin: 30px auto 60px auto;
 }
 
 .about-intro {
-    font-size: 13.5px;
+    font-size: 13px;
     line-height: 1.62;
     color: #212121;
     margin-bottom: 24px;
@@ -583,7 +724,7 @@ body {
 
 .about-subtitle {
     font-family: 'Open Sans', 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 13.5px;
     font-weight: 700;
     color: #212121;
     margin-bottom: 12px;
@@ -596,7 +737,7 @@ body {
 }
 
 .about-list li {
-    font-size: 13.5px;
+    font-size: 13px;
     line-height: 1.65;
     color: #212121;
     margin-bottom: 4px;
@@ -604,7 +745,7 @@ body {
 
 .partners-title {
     font-family: 'Open Sans', 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     color: #212121;
     margin-top: 36px;
@@ -623,7 +764,7 @@ body {
 }
 
 .esf-intro {
-    font-size: 13.5px;
+    font-size: 13px;
     line-height: 1.62;
     color: #212121;
     margin-top: 32px;
@@ -678,6 +819,10 @@ body {
         margin-bottom: 20px;
     }
     .columns-grid {
+        grid-template-columns: 1fr;
+        row-gap: 36px;
+    }
+    body.page-home .columns-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 25px;
     }
@@ -698,18 +843,11 @@ body {
 }
 
 @media (max-width: 600px) {
-    .columns-grid {
+    body.page-home .columns-grid {
         grid-template-columns: 1fr;
     }
 
-    .columns-grid .column-box:hover {
+    body.page-home .columns-grid .column-box:hover {
         transform: scale(1.03);
-    }
-
-    .content-text,
-    .contacts-container,
-    .clients-container,
-    .about-container {
-        padding: 24px 20px;
     }
 }

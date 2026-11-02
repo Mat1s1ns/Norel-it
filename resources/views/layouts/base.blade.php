@@ -14,10 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Roboto:wght@400;500;700&family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/app.css?v={{ time() }}">
     @stack('styles')
 </head>
-<body>
+<body class="{{ request()->is('/') ? 'page-home' : '' }}">
 
     <!-- Top Navigation Header -->
     <header class="site-header">
@@ -55,17 +55,63 @@
             <a href="/musu-klienti" class="nav-item {{ request()->is('musu-klienti*') ? 'active' : '' }}">Mūsu klienti</a>
             <span class="nav-separator">·</span>
 
-            <div class="nav-dropdown">
+            <a href="/par-mums" class="nav-item {{ request()->is('par-mums*') ? 'active' : '' }}">Par mums</a>
+            <span class="nav-separator">·</span>
+
+            <div class="nav-dropdown more-dropdown" id="moreDropdown">
                 <span class="dropdown-trigger">
                     <span>More</span>
                     <svg class="dropdown-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
                 </span>
-                <ul class="dropdown-menu">
-                    <li><a href="/par-mums" class="dropdown-item">Par mums</a></li>
-                    <li><a href="/serveri" class="dropdown-item">Serveri</a></li>
-                    <li><a href="/veikalu-aprikojums" class="dropdown-item">Veikalu aprīkojums</a></li>
-                    <li><a href="/vidzemes-datu-centrs" class="dropdown-item">Vidzemes datu centrs</a></li>
-                </ul>
+                <div class="dropdown-menu drilldown-menu">
+                    <!-- LEVEL 1: Root More Menu (Matches Image 1) -->
+                    <ul class="drilldown-panel" data-level="1" style="list-style: none; margin: 0; padding: 0;">
+                        <li style="list-style: none;"><a href="/serveri" class="dropdown-item">Serveri</a></li>
+                        <li class="drilldown-item-wrap" style="list-style: none;">
+                            <div class="drilldown-row">
+                                <button type="button" class="drilldown-btn" data-goto="2" aria-label="Izvērst Veikalu aprīkojums">
+                                    <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+                                </button>
+                                <a href="/veikalu-aprikojums" class="dropdown-item drilldown-text">Veikalu aprīkojums</a>
+                            </div>
+                        </li>
+                        <li style="list-style: none;"><a href="#" class="dropdown-item">Vidzemes datu centrs</a></li>
+                    </ul>
+
+                    <!-- LEVEL 2: Veikalu aprīkojums (Matches Image 2) -->
+                    <ul class="drilldown-panel" data-level="2" style="display: none; list-style: none; margin: 0; padding: 0;">
+                        <li class="breadcrumb-item" style="list-style: none;">
+                            <a href="#" class="dropdown-item breadcrumb-link" data-goto="1">Veikalu aprīkojums</a>
+                        </li>
+                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Apkalpošana</a></li>
+                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Kases aparāti</a></li>
+                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Kases sistēmas</a></li>
+                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Noma</a></li>
+                        <li class="drilldown-item-wrap" style="list-style: none;">
+                            <div class="drilldown-row drilldown-row-lvl2">
+                                <button type="button" class="drilldown-btn drilldown-btn-lvl2" data-goto="3" aria-label="Izvērst Padomi EKA lietotājie...">
+                                    <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+                                </button>
+                                <a href="#" class="dropdown-item child-item drilldown-text">Padomi EKA lietotājie...</a>
+                            </div>
+                        </li>
+                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Svari</a></li>
+                    </ul>
+
+                    <!-- LEVEL 3: Padomi EKA lietotājiem (Matches Image 3) -->
+                    <ul class="drilldown-panel" data-level="3" style="display: none; list-style: none; margin: 0; padding: 0;">
+                        <li class="breadcrumb-item" style="list-style: none;">
+                            <a href="#" class="dropdown-item breadcrumb-link" data-goto="1">Veikalu aprīkojums</a>
+                        </li>
+                        <li class="breadcrumb-item" style="list-style: none;">
+                            <a href="#" class="dropdown-item breadcrumb-link" data-goto="2">Padomi EKA lietotājiem</a>
+                        </li>
+                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Jaunās prasības svari...</a></li>
+                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Laika maiņa kases ap...</a></li>
+                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Par lietotu kases apa...</a></li>
+                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Šasijas numurs kontr...</a></li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Search Icon -->
@@ -79,5 +125,50 @@
 
     @yield('content')
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const moreDropdown = document.getElementById('moreDropdown');
+            if (!moreDropdown) return;
+
+            const panels = moreDropdown.querySelectorAll('.drilldown-panel');
+
+            function showLevel(levelNum) {
+                panels.forEach(p => {
+                    if (p.getAttribute('data-level') === String(levelNum)) {
+                        p.style.display = 'block';
+                    } else {
+                        p.style.display = 'none';
+                    }
+                });
+            }
+
+            // Drill down on toggle button click
+            moreDropdown.addEventListener('click', function (e) {
+                const toggleBtn = e.target.closest('.drilldown-btn');
+                if (toggleBtn) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const targetLevel = toggleBtn.getAttribute('data-goto');
+                    if (targetLevel) showLevel(targetLevel);
+                    return;
+                }
+
+                // Return on breadcrumb link click
+                const breadcrumbLink = e.target.closest('.breadcrumb-link');
+                if (breadcrumbLink) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const targetLevel = breadcrumbLink.getAttribute('data-goto');
+                    if (targetLevel) showLevel(targetLevel);
+                    return;
+                }
+            });
+
+            // Reset back to level 1 when mouse leaves more dropdown
+            moreDropdown.addEventListener('mouseleave', function () {
+                showLevel(1);
+            });
+        });
+    </script>
 </body>
 </html>

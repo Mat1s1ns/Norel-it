@@ -26,7 +26,7 @@
             <article class="column-box">
                 <h2 class="column-title">Uzņēmumiem</h2>
                 <p class="column-desc">
-                    Biroja tehnikas un datoru apkalpošana, IT audits, datortīklu un serveru risinājumi, licenču audits, datu drošības risinājumi un rezerves kopēšana.
+                    Kompleksi IT risinājumi atbilstoši katra klienta vēlmēm un vajadzībām. Mēs ļoti augstu vērtējam klientu biznesa procesus, tāpēc piedāvājam pakalpojumus un produktus, kas vislabāk spēj šos procesus nodrošināt un uzlabot.
                 </p>
             </article>
 
@@ -34,7 +34,7 @@
             <article class="column-box">
                 <h2 class="column-title">Tirgotājiem</h2>
                 <p class="column-desc">
-                    Kases aparāti, kases sistēmas, skeneri, svari, čeku lentes, tirdzniecības programmas un to apkalpošana.
+                    Ērti un atbilstoši risinājumi veikaliem un veikalu ķēdēm. Tirgojam jaunus un Latvijas darba videi piemērotus kases aparātus un kases sistēmas, to perifēriju (skenerus, uzlīmju un parastos svarus, uzlīmju printerus, čeku lentas). Nodrošinām pilnu kases aparāta apkalpošanu.
                 </p>
             </article>
 
@@ -42,7 +42,7 @@
             <article class="column-box">
                 <h2 class="column-title">Privātpersonām</h2>
                 <p class="column-desc">
-                    Datoru diagnostika un remonts, programmatūras uzstādīšana, profilakse, datortehnikas tirdzniecība un konsultācijas.
+                    Veicam ātru un kvalitatīvu datoru diagnostiku un remontu. Ja nepieciešams jauns dators mājas birojam vai datortspēlēm, mūsu speciālisti piedāvās labāko risinājumu.
                 </p>
             </article>
 
