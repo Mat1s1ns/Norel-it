@@ -46,3 +46,7 @@ Route::get('/par-mums', function () {
     return view('par-mums');
 });
 
+Route::get('/serveri', function () {
+    return view('serveri');
+});
+
