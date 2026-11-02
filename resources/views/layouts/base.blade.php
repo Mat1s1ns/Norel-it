@@ -75,7 +75,7 @@
                                 <a href="/veikalu-aprikojums" class="dropdown-item drilldown-text">Veikalu aprīkojums</a>
                             </div>
                         </li>
-                        <li style="list-style: none;"><a href="#" class="dropdown-item">Vidzemes datu centrs</a></li>
+                        <li style="list-style: none;"><a href="/vidzemes-datu-centrs" class="dropdown-item">Vidzemes datu centrs</a></li>
                     </ul>
 
                     <!-- LEVEL 2: Veikalu aprīkojums (Matches Image 2) -->
@@ -83,19 +83,19 @@
                         <li class="breadcrumb-item" style="list-style: none;">
                             <a href="#" class="dropdown-item breadcrumb-link" data-goto="1">Veikalu aprīkojums</a>
                         </li>
-                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Apkalpošana</a></li>
-                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Kases aparāti</a></li>
-                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Kases sistēmas</a></li>
-                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Noma</a></li>
+                        <li style="list-style: none;"><a href="/apkalposana" class="dropdown-item child-item">Apkalpošana</a></li>
+                        <li style="list-style: none;"><a href="/kases-aparati" class="dropdown-item child-item">Kases aparāti</a></li>
+                        <li style="list-style: none;"><a href="/kases-sistemas" class="dropdown-item child-item">Kases sistēmas</a></li>
+                        <li style="list-style: none;"><a href="/noma" class="dropdown-item child-item">Noma</a></li>
                         <li class="drilldown-item-wrap" style="list-style: none;">
                             <div class="drilldown-row drilldown-row-lvl2">
                                 <button type="button" class="drilldown-btn drilldown-btn-lvl2" data-goto="3" aria-label="Izvērst Padomi EKA lietotājie...">
                                     <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
                                 </button>
-                                <a href="#" class="dropdown-item child-item drilldown-text">Padomi EKA lietotājie...</a>
+                                <a href="/padomi-eka-lietotajiem" class="dropdown-item child-item drilldown-text">Padomi EKA lietotājie...</a>
                             </div>
                         </li>
-                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Svari</a></li>
+                        <li style="list-style: none;"><a href="/svari" class="dropdown-item child-item">Svari</a></li>
                     </ul>
 
                     <!-- LEVEL 3: Padomi EKA lietotājiem (Matches Image 3) -->
@@ -106,10 +106,10 @@
                         <li class="breadcrumb-item" style="list-style: none;">
                             <a href="#" class="dropdown-item breadcrumb-link" data-goto="2">Padomi EKA lietotājiem</a>
                         </li>
-                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Jaunās prasības svari...</a></li>
-                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Laika maiņa kases ap...</a></li>
-                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Par lietotu kases apa...</a></li>
-                        <li style="list-style: none;"><a href="#" class="dropdown-item child-item">Šasijas numurs kontr...</a></li>
+                        <li style="list-style: none;"><a href="/jaunas-prasibas-svariem" class="dropdown-item child-item">Jaunās prasības svari...</a></li>
+                        <li style="list-style: none;"><a href="/laika-maina-kases-aparatiem" class="dropdown-item child-item">Laika maiņa kases ap...</a></li>
+                        <li style="list-style: none;"><a href="/par-lietotu-kases-aparatu-pirksanu-pardosanu" class="dropdown-item child-item">Par lietotu kases apa...</a></li>
+                        <li style="list-style: none;"><a href="/sasijas-numurs-kontrollente" class="dropdown-item child-item">Šasijas numurs kontr...</a></li>
                     </ul>
                 </div>
             </div>
